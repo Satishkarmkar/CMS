@@ -1,0 +1,86 @@
+.top_head{
+    /*background-color:lightcoral;*/
+    text-align: center;
+    font-family: "Century Schoolbook";
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    margin: 0 auto;
+      font-size: 25px;
+
+  /*background: -webkit-linear-gradient(#eee, #333);*/
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+.fixed-top {
+    position: fixed;
+    top: 48px;
+    height: 45px;
+}
+.logo{
+    transform: rotateZ(-10deg);
+    text-shadow: 3px 3px 3px cornsilk;
+
+}
+.spin {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.spin * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.spin li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 15px 1.5em;
+  overflow: hidden;
+}
+.spin a {
+  padding: 0.3em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.spin a:before,
+.spin a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.spin a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #e67e22;
+}
+.spin a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white !important;
+  white-space: nowrap;
+}
+.spin li:hover a,
+.spin .current a {
+  transform: translateY(100%);
+  padding-right:2px;
+}
+.carousel-inner{
+    height: 90vh;
+}
+
+button.btn.btn-primary.loginbtn {
+    line-height: 36px;
+    padding: 0 127px;
+}

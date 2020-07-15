@@ -1,0 +1,12 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+    {% include 'stu_nav.html' %}
+    <h1 style="text-align: center">
+       Welcome Student
+    </h1>
+    <h2 style="text-align: center">
+       {{ name|capfirst}}
+    </h2>
+
+{% endblock %}

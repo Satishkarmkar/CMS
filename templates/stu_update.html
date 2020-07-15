@@ -1,0 +1,86 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block common %}
+    {% include 'stu_nav.html' %}
+
+    <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formRegister"></span>
+                    <hr class="mb-5">
+
+                    <!-- form card register -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Update Your Data</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" method="post" action="{% url 'stu_updated' %}?">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="inputName"><b>Name</b></label>
+                                    <input type="text" class="form-control" id="inputName" value="{{ data.name }}" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAge"><b>Age</b></label>
+                                    <input type="number" class="form-control" id="inputAge" value="{{ data.age }}" name="age">
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="inputContact"><b>Gender</b></label>
+                                </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                                  <label class="form-check-label" for="male">
+                                    Male
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                  <label class="form-check-label" for="female">
+                                    Female
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="gender" id="others" value="others">
+                                  <label class="form-check-label" for="others">
+                                    Others
+                                  </label>
+                              </div>
+
+                                <div class="form-group">
+                                    <label for="inputContact"><b>Contact</b></label>
+                                    <input type="number" class="form-control" id="inputContact" value="{{ data.contact }}" name="contact">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail3"><b>Email</b></label>
+                                    <input type="email" class="form-control" id="inputEmail3" value="{{ data.email }}" required="" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputUsername"><b>Username</b></label>
+                                    <input type="text" class="form-control" id="inputUsername" value="{{ data.uname }}" required="" name="uname">
+                                </div>
+                                <div class="form-group">
+{#                                    <label for="inputPassword3"><b>Password</b></label>#}
+{#                                    <input type="hidden" class="form-control" id="inputPassword3" value="{{ data.passwd }}" required="" name="passwd">#}
+{#                                </div>#}
+{#                                <div class="form-group">#}
+{#                                    <label for="inputVerify3">Verify</label>#}
+{#                                    <input type="password" class="form-control" id="inputVerify3" placeholder="Password (again)" required="">#}
+{#                                </div>#}
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg float-right">Update</button>
+                                </div>
+                                </div>
+                            </form>
+                            {% for x in messages %}
+                                <h3 style="color: red;font-size: 40px;font-family: Chiller;text-align: center">
+                                    {{ x }}
+                                </h3>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- /form card register -->
+
+                </div>
+
+
+{% endblock %}

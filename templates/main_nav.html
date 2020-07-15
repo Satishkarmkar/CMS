@@ -1,0 +1,26 @@
+       <nav class="navbar navbar-expand-lg bg-info navbar-dark">
+           <a class="navbar-brand" href="{% url 'home' %}"><h5 class="logo">TechHungers Institute</h5></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav ml-auto spin">
+      <li class="nav-item current">
+        <a class="" href="{% url 'home' %}" data-hover="Home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="text-white" href="{% url 'studentLogin' %}" data-hover="Login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="text-white" href="{% url 'stu_registration' %}" data-hover="Register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="text-white" href="#" data-hover="Forgot-Password">Forgot-Password</a>
+      </li>
+       <li class="nav-item">
+        <a class="text-white" href="#" data-hover="Admin">Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>
